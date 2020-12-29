@@ -1,0 +1,171 @@
+
+
+<!DOCTYPE html>
+<html>
+<link>
+    <title>Link Online Tutoring</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/home_style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<script>
+
+
+    function getUsername(){
+
+            let data = window.location; //the whole link
+            data = data.toString(); //set it to string
+            let arr = data.split("username="); //split and get the link
+            let username =  arr[arr.length-1];
+
+            let path = "post.html?username=" + decodeURIComponent(username);
+            document.querySelector("#post_id").href = path ; //set the link of the html page with the username on it
+
+    }
+
+    function sendCourseId(id) {
+        let value1 = localStorage.setItem("c_id", id);
+
+
+    }
+
+
+
+</script>
+
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<nav class="navbar navbar-inverse navbar-fixed-top" >
+    <div class="container-fluid" style="color: #008577">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" id="topName" href="home.html">Link Online Tutoring</a>
+        </div>
+        <div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown" >
+                        <a class="dropdown-toggle" data-toggle="dropdown"  href="#">
+                            <i class="fa fa-list" aria-hidden="true"></i>
+                            Post Feed
+                            <span class="caret"></span></a>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                    <a class="test" tabindex="-1" href="#">SCIENCE</a>
+                                <ul class="dropdown-menu">
+                                    <li><a  tabindex="-1" href="questions.html" onclick="sendCourseId(1)">COMS</a></li>
+                                    <li><a  tabindex="-1" href="questions.html" onclick="sendCourseId(2)">APPM</a></li>
+                                    <li><a  tabindex="-1" href="questions.html" onclick="sendCourseId(3)">MATHEMATICS </a></li>
+                                    <li><a  tabindex="-1" href="questions.html" onclick="sendCourseId(4)">PHYSICS</a></li>
+
+                                </ul>
+
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    COMMERCE
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="questions.html" onclick="sendCourseId(5)">ACCOUNTING SCIENCE</a></li>
+                                    <li><a href="questions.html" onclick="sendCourseId(6)">ECONOMICS </a></li>
+                                    <li><a href="questions.html" onclick="sendCourseId(7)">FINANCE</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    HEALTH SCIENCE
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="questions.html" onclick="sendCourseId(8)">PHYSIOTHERAPY</a></li>
+                                    <li><a href="questions.html" onclick="sendCourseId(9)">DENTAL SCIENCE</a></li>
+                                    <li><a href="questions.html" onclick="sendCourseId(10)">MEDICINE AND SURGERY</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu" >
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                    HUMMANITIES
+                                </a>
+                                <ul class="dropdown-menu" >
+                                    <li><a href="questions.html" onclick="sendCourseId(11)">DIGITAL ARTS</a></li>
+                                    <li><a href="questions.html" onclick="sendCourseId(12)">EDUCATION</a></li>
+
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="chats_users.html" id="post_btn">
+                            <i class="fa fa-comments" aria-hidden="true"></i>
+                            Chat
+                        </a>
+                    </li>
+                    <li>
+                        <a href=""  onclick="getUsername()"  id="post_id">
+                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                            Post
+                        </a>
+                    </li>
+                    <li >
+                        <a href="profile.html">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            Profile
+                        </a>
+                    </li>
+                    <li >
+                        <a href="events.html">
+                            <i class="fa fa-book" aria-hidden="true"></i>
+                            Open Windows
+                        </a>
+                    </li>
+                    <li>
+                        <a href="profession.html" id="apply">
+                            <i class="fa fa-link" aria-hidden="true"></i>                            Be a Tutor
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<div class="animation-area">
+  <ul class="box-area">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <div class="header-div">
+        <img class="hands" src="../image/hands.png" >
+    </div>
+
+    <div class="hands-div">
+        <p>Welcome to Link </p>
+    </div>
+
+
+    <li></li>
+    <li></li>
+  </ul>
+
+
+
+
+</div>
+
+
+</body>
+</html>

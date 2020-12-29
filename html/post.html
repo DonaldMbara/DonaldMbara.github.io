@@ -1,0 +1,86 @@
+
+
+<!DOCTYPE html>
+<html>
+<link>
+<title>Link Online Tutoring</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../css/post.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../js/post.js"></script>
+
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50" >
+
+
+<script>
+    function count(){
+        let str="";
+        let val=document.form.posting_text.value;
+
+        str=(val);
+
+        document.getElementById("charLength").innerHTML=str.length;
+    }
+
+    function setName(name) {
+        // document.querySelector('#courses').innerText = name;
+        document.querySelector('#courses').name = name;
+
+    }
+    function setValue(value) {
+        document.querySelector('#courses').innerText = value;
+        document.querySelector('#courses').value = value;
+    }
+
+
+
+
+</script>
+
+
+<fieldset id="filedset">
+    <legend style="color:black;">
+        Write and post your question here
+    </legend>
+    <form name="form" id ="posting-form" method="post" >
+
+            <textarea  id = "status" cols="30" rows="10" name="posting_text"  maxlength="100" placeholder="write your question..."
+                      onkeyup='count()'onfocus='(this.style.backgroundColor="lightyellow")'
+                      style="resize: none; width: 400px; height: 100px;">
+</textarea>
+            <div class="dropdown">
+            <button class="dropbtn" id="courses" value ="">Select Course</button>
+            <div class="dropdown-content" id="select_courses">
+                <a class = "Science" id="COMS" value = "COMS"  onclick="setValue('COMS'); setName('1')"> COMS</a>
+                <a class = "Science" id="APPM" onclick="setValue('APPM');setName('2')"> APPM</a>
+                <a class = "Science" id="PHYSICS" onclick="setValue('PHYSICS');setName('4')">PHYSICS</a>
+                <a class = "Science" id="MATHEMATICS" onclick="setValue('MATHEMATICS');setName('3')">MATHEMATICS</a>
+                <a class = "Commerce" id="ACCOUNTING SCIENCE" onclick="setValue('ACCOUNTING SCIENCE');setName('5')">ACCOUNTING SCIENCE</a>
+                <a class = "Commerce" id="ECONOMICS" onclick="setValue('ECONOMICS');setName('6')">ECONOMICS</a>
+                <a class = "Commerce" id="FINANCE" onclick="setValue('FINANCE');setName('7')">FINANCE</a>
+                <a class = "Health Science" id="DENTAL SCIENCE"  onclick="setValue('DENTAL SCIENCE');setName('9')"> DENTAL SCIENCE</a>
+                <a class = "Commerce" id="DIGITAL ARTS" onclick="setName('11');setValue('DIGITAL ARTS');">DIGITAL ARTS</a>
+                <a class = "Health Science" id="MEDICINE AND SURGERY" onclick="setValue('MEDICINE AND SURGERY');setName('10')">MEDICINE AND SURGERY</a>
+                <a class = "Health Science" id="PHYSIOTHERAPY" onclick="setValue('PHYSIOTHERAPY');setName('8')"> PHYSIOTHERAPY</a>
+                <a class = "Humanities" id="EDUCATION" onclick="setValue('EDUCATION');setName('12')"> EDUCATION</a>
+            </div>
+        </div>
+        <p>Max 100 characters</p>
+        <div id="charLength"></div>
+        <hr>
+        <input class="button"  type="submit"  value="Post" id="post_btn" onclick="getUsername()" >
+        <hr>
+    </form>
+</fieldset>
+
+
+
+
+
+</body>
+</html>
